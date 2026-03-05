@@ -118,13 +118,3 @@ jobs:
     - name: Run python ion.py --debug
       run: |
         python ion.py --brave --incognito --do-not-track --xvfb --screenshot
-
-    # -------------------------
-    # UPLOAD ARTIFACTS
-    # -------------------------
-    - name: Upload screenshots
-      uses: actions/upload-artifact@v4
-      with:
-        name: seleniumbase-screenshots
-        path: |
-          ./latest_logs/
